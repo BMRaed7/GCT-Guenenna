@@ -1103,9 +1103,9 @@ ol {
 	position: relative;
 	text-align: center;
 	background-size: cover;
-	background-position: left;
+	background-position: center;
 	background-repeat: no-repeat;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	height: 400px;
 	width: 100%;
 }
@@ -1119,6 +1119,21 @@ ol {
 	background-image: url(../img/slide_21.jpg);
 	margin-bottom: 80px;
 	background-position: top;
+}
+.box1:hover, .box2:hover, .box3:hover{
+	animation: scale 0.5s linear;
+	animation-fill-mode: forwards;
+}
+@keyframes scale{
+	0%{
+		-webkit-transform:scale(1);
+		transform: scale(1);
+	}
+	100%{
+		-webkit-transform:scale(1.05);
+		transform: scale(1.05);
+		box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+	}
 }
 .box1::after, .box2::after, .box3::after{
 	content: "";
@@ -1245,7 +1260,8 @@ ol {
 .last-section .lookbok-left{
 	border-radius: 10px;
 	margin-bottom: 20px;
-	padding: 20px;
+	height: 100%;
+	padding: 20px 20px 0px;
 	background-color: #f9fbfb;
 	box-shadow: 5px 10px 15px -5px rgba(0, 0, 0, 0.2);
 }
@@ -1954,7 +1970,7 @@ ol {
 }
 
 .price-box-right h5 {
-	border-radius: 10px;
+	background-color: #fff;
 	margin-top: 15px;
 	color: #5a5a5a;
 	font-size: 15px;
@@ -2344,6 +2360,9 @@ ol {
 	.slide2 h2{
 		line-height: 40px;
 	}
+	.last-section .lookbok-left{
+		height: auto;
+	}
 }
 
 /* Small : 320px iPhone X */
@@ -2562,5 +2581,11 @@ ol {
 	}
 	.main-page-title h1{
 		line-height: 60px;
+	}
+	.product-part .box3 h1{
+		font-size: 35px;
+	}
+	.last-section .lookbok-left{
+		height: auto;
 	}
 }
